@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*, 
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    height: 100vh;
+    display: flex;
+    font-family: 'Overpass', sans-serif;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    background: radial-gradient(ellipse at center top, hsl(213, 19%, 18%),  hsl(216, 12%, 8%));
+    border-radius: 35px;
+    width: 400px;
+    padding: 35px;
+    color: #fff;
+}
+
+/* Hide container */
+
+.container-hidden {
+    visibility: hidden;
+}
+
+.rating-svg {
+    background-image: url(./images/icon-star.svg);
+    background-color: hsl(213, 19%, 18%);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+
+.circular-rating {
+    background-color:  hsl(213, 19%, 18%);
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: hsl(217, 12%, 63%);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    border: none;
+}
+
+
+.circular-rating:hover {
+    background-color:hsl(217, 12%, 63%);
+    color: #fff;
+}
+
+.circular-rating-clicked {
+    background-color:  hsl(213, 19%, 18%);
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    border: none;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+p{
+    color:  hsl(217, 12%, 63%);;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    font-size: 14px;
+}
+
+.btn {
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 25px;
+    color: #fff;
+    background-color: hsl(25, 97%, 53%);
+    transition: all 0.35s ease-in-out; 
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: #fff;
+}
+
+.thanks-container {
+    position: absolute;
+    background: radial-gradient(ellipse at center top, hsl(213, 19%, 18%),  hsl(216, 12%, 8%));
+    border-radius: 15px;
+    max-width: 400px;
+    padding: 3%;
+    margin: 1em;
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+}
+/* Hidden Thanks Container */
+
+.thanks-container-visible {
+    visibility: visible;
+}
+
+.rating-img {
+    margin-bottom: 32px;
+}
+
+
+
+.selected-review {
+    background-color: hsl(213, 19%, 18%) ;
+    padding: 5px 12px;
+    font-size: 15px;
+    color: hsl(25, 97%, 53%);
+    border-radius: 15px;
+}
+
+.thanks-state-text {
+    margin-top: 40px; 
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 2%;
+    }
+
+    .btn:hover {
+        background-color: hsl(25, 97%, 53%);
+        color:#fff;
+    }
+    .circular-rating:hover {
+        background-color: none;
+        color: none;
+    }
+
+    .container {
+        margin: 1em;
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+}
